@@ -1,0 +1,21 @@
+package {{.Package}}
+
+import (
+	"database/sql"
+
+	"github.com/quangdinh/pg-migration/migrator"
+)
+
+type migration_{{.Version}} struct{}
+
+func (m *migration_{{.Version}}) Up(tx *sql.Tx) error {
+	return nil
+}
+
+func (m *migration_{{.Version}}) Down(tx *sql.Tx) error {
+	return nil
+}
+
+func init() {
+	migrator.MustRegister(&migration_{{.Version}}{})
+}
