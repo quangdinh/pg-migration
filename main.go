@@ -74,7 +74,7 @@ func main() {
 
 	err = t.Execute(f, map[string]string{
 		"Package": config.Package,
-		"Name":    name,
+		"Version": time,
 	})
 	if err != nil {
 		fmt.Printf("Execute template failed: %s\n", err)
